@@ -5,7 +5,7 @@
     src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
 
-@media screen and (max-width: 375px)    {
+@media screen and (min-width: 360px) and (max-width: 720px){
     *{
         box-sizing: border-box;
         margin: 0px;
@@ -17,8 +17,7 @@
         color: white;
         font-family: 'Inconsolata';
         background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         padding: 7px;
     }
