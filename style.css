@@ -5,70 +5,59 @@
     src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px){
+@media screen and (max-width: 375px)    {
     *{
         box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
     }
     
     html, body {
         background-image: url(assets/images/background-mobile.png);
-        position: relative;
-        font-family: 'Inconsolata';
         color: white;
+        font-family: 'Inconsolata';
         background-position: center center;
-        background-size: cover;
-    }
-
-    .dv0 {
-        background-image: url(assets/images/pattern-squiggly-line-top.svg);
-        background-size: auto;
+        background-size: contain;
         background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-        position: absolute;
+        position: relative;
+        padding: 7px;
     }
 
-    .dv1 {
-        background-image: url(assets/images/pattern-lines.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
-
-    .dv2{
-        background-image: url(assets/images/pattern-circle.svg);
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: right center;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-
-        transform: translate(-30%, -5%);
-    }
-
-    .dv3 {
-        background-image: url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 50%;
-        width: 50%;
-        position: absolute;
-        top: 100%;
-    }
+   header {
+    text-align: center;
+    margin-top: 30px;
+   }
     
     main {
         overflow: hidden;
+    }
+
+    main > p {
+        font-size: 0.6em;
+        position: relative;
+        top: 30%;
+    }
+
+    main > p::before {
+        content: url(assets/images/icon-info.svg);
+        padding: 5px;
+
     }
 
     div.apresentacao {
         text-align: center;
         padding: 10px;
         margin: 10px 0px;
+    }
+
+    div.apresentacao > h1{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    div.apresentacao > p {
+        margin: 10px;
+        padding: 10px;
     }
 
     div.upload {
@@ -97,12 +86,6 @@
         display: none;
     }
 
-    main > p {
-        font-size: 0.6em;
-        position: relative;
-        top: 30%;
-    }
-
     div.formulario {
         margin: 20px 0px;
         color: white;
@@ -112,9 +95,9 @@
         text-align: left;
     }
 
-    div.formulario > input.campo {
+    div.formulario > input {
         background-color: hsla(252, 6%, 83%, 0.137);
-        margin: 7px 0px 15px;
+        margin: 7px 0px 20px;
         display: block;
         width:100%;
         height: 40px;
@@ -130,7 +113,7 @@
         height: 40px;
         font-weight: bold;
         padding: 5px;
-        margin: 10px 0px;
+        margin: 20px 0px;
         border-radius: 10px;
         border: 1px solid hsl(7, 88%, 67%);
     }
