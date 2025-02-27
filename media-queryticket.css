@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 720px) {
+
+    html,
+    body {
+        background: url(assets/images/pattern-lines.svg), url(assets/images/pattern-squiggly-line-top.svg), url(assets/images/pattern-circle.svg), url(assets/images/pattern-squiggly-line-bottom-desktop.svg), url(assets/images/background-desktop.png);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-size: auto, 350px, 190px, auto, cover;
+        background-position: center top, 93% 20%, 75% 58%, 0% 100%;
+    }
+
+    header {
+        width: 60%;
+        margin: auto;
+    }
+
+    header>img {
+        margin: 30px;
+    }
+
+    header>div.apresentacao>h1 {
+        font-size: 3em;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    header>div.apresentacao>p {
+        font-size: 1.2em;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media screen and (min-width: 1441px) {
+
+    html,
+    body {
+        background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+    }
+
+    header {
+        width: 40%;
+        margin: auto;
+    }
+}
