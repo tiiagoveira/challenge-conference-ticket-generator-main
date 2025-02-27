@@ -5,147 +5,148 @@
     src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
 
-@media screen and (min-width: 360px) and (max-width: 720px) {
-    * {
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 
-    html,
-    body {
-        color: white;
-        font-family: 'Inconsolata';
-        background: url(assets/images/pattern-lines.svg), url(assets/images/pattern-squiggly-line-top.svg), url(assets/images/pattern-circle.svg), url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg), url(assets/images/background-mobile.png);
-        background-repeat: no-repeat;
-        background-size: auto, 25%, 30%, contain, cover;
-        background-position: left top, right top, 115% 68%, 0% 110%;
-    }
+html,
+body {
+    color: white;
+    font-family: 'Inconsolata';
+    background: url(assets/images/pattern-lines.svg), url(assets/images/pattern-squiggly-line-top.svg), url(assets/images/pattern-circle.svg), url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg), url(assets/images/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 160vh, 20%, 20%, 75%, cover;
+    background-position: left top, 90% 2%, 110% 60%, left bottom;
+}
 
-    header {
-        text-align: center;
-    }
+header {
+    text-align: center;
+}
 
-    header>img {
-        margin-top: 60px;
-    }
+header>img {
+    margin-top: 30px;
+}
 
-    main {
-        overflow: hidden;
-        padding: 10px;
-    }
+header>div.apresentacao {
+    text-align: center;
+    padding: 10px;
+}
 
-    div.apresentacao {
-        text-align: center;
-        padding: 10px;
-    }
+header>div.apresentacao>h1 {
+    margin: 10px;
+    padding: 10px;
+}
 
-    div.apresentacao>h1 {
-        margin: 20px;
-        padding: 10px;
-    }
+header>div.apresentacao>p {
+    margin: 10px;
+    padding: 10px;
+}
 
-    div.apresentacao>p {
-        margin: 30px;
-        padding: 10px;
-    }
+main {
+    width: 450px;
+    overflow: hidden;
+    padding: 10px;
+    margin: auto;
+}
 
-    div.upload {
-        margin: 20px 0px;
-        background-color: hsla(252, 6%, 83%, 0.137);
-        border: 2px dashed hsla(252, 6%, 83%, 0.397);
-        border-radius: 10px;
-        height: 190px;
-    }
+div.upload {
+    margin: 15px 0px;
+    background-color: hsla(252, 6%, 83%, 0.137);
+    border: 2px dashed hsla(252, 6%, 83%, 0.397);
+    border-radius: 10px;
+    height: 150px;
+}
 
-    div.upload>label {
-        padding: 7px 0px;
-        display: block;
-        text-align: center;
-        background-color: hsla(252, 6%, 83%, 0.137);
-        border: 2px solid hsla(252, 6%, 83%, 0.137);
-        border-radius: 10px;
-        width: 10%;
-        height: 25%;
-        position: relative;
-        top: 38%;
-        left: 46%;
-    }
+div.upload>label {
+    padding: 7px 0px;
+    display: block;
+    text-align: center;
+    background-color: hsla(252, 6%, 83%, 0.137);
+    border: 2px solid hsla(252, 6%, 83%, 0.137);
+    border-radius: 10px;
+    width: 10%;
+    height: 25%;
+    position: relative;
+    top: 32%;
+    left: 46%;
+}
 
-    div.upload>label:hover{
-        background-color: antiquewhite;
-        cursor: pointer;
-    }
+div.upload>label:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
 
-    div.upload>input {
-        display: none;
-    }
+div.upload>input {
+    display: none;
+}
 
-    div.upload>p {
-        text-align: center;
-        position: relative;
-        top: 50%;
-    }
+div.upload>p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
 
-    main>p#orientacao {
-        margin-bottom: 40px;
-        font-size: 0.6em;
-        position: relative;
-        top: 30%;
-    }
+main>p#orientacao {
+    margin-bottom: 25px;
+    font-size: 0.6em;
+    position: relative;
+    top: 30%;
+}
 
-    main>p#orientacao::before {
-        content: url(assets/images/icon-info.svg);
-        padding: 5px;
+main>p#orientacao::before {
+    content: url(assets/images/icon-info.svg);
+    padding: 5px;
 
-    }
+}
 
-    div.formulario {
-        margin: 20px 0px;
-        color: white;
-    }
+div.formulario {
+    margin: 20px 0px;
+    color: white;
+}
 
-    div.formulario>label {
-        text-align: left;
-    }
+div.formulario>label {
+    text-align: left;
+}
 
-    div.formulario>input {
-        background-color: hsla(252, 6%, 83%, 0.137);
-        margin: 10px 0px 30px;
-        display: block;
-        width: 100%;
-        height: 50px;
-        padding: 5px;
-        border-radius: 10px;
-        border: 1px solid hsla(252, 6%, 83%, 0.356);
-    }
+div.formulario>input {
+    background-color: hsla(252, 6%, 83%, 0.137);
+    margin: 10px 0px 20px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid hsla(252, 6%, 83%, 0.356);
+}
 
-    div.formulario>input:focus-within {
-        background-color: white;
-    }
+div.formulario>input:focus-within {
+    background-color: white;
+}
 
-    div.formulario>input#button {
-        background-color: hsl(7, 88%, 67%);
-        color: hsl(248, 70%, 10%);
-        width: 100%;
-        height: 50px;
-        font-weight: bold;
-        padding: 5px;
-        margin: 70px 0px;
-        border-radius: 10px;
-        border: 1px solid hsl(7, 88%, 67%);
-        cursor: pointer;
-    }
+div.formulario>input#button {
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    border: 1px solid hsl(7, 88%, 67%);
+    cursor: pointer;
+}
 
-    div.formulario>input#button:hover {
-        background-color: antiquewhite;
-    }
+div.formulario>input#button:hover {
+    background-color: antiquewhite;
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
     padding: 10px;
+    margin-top: 90px;
 }
 
 .attribution a {

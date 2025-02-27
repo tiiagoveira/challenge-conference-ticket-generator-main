@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    color: white;
+    font-family: 'Inconsolata';
+    background: url(assets/images/pattern-lines.svg), url(assets/images/pattern-squiggly-line-top.svg), url(assets/images/pattern-circle.svg), url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg), url(assets/images/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 160vh, 20%, 20%, 75%, cover;
+    background-position: left top, 90% 4%, 110% 75%, left bottom;
+}
+
+header {
+    text-align: center;
+    margin: 10px;
+    width: 450px;
+}
+
+header>img {
+    margin-top: 50px;
+}
+
+header>div.apresentacao {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+header>div.apresentacao>h1 {
+    margin: 10px;
+    padding: 10px;
+}
+
+header>div.apresentacao>h1>span {
+    background-image: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header>div.apresentacao>p {
+    margin: 10px;
+    padding: 10px;
+}
+
+header>div.apresentacao>p>span {
+    color: hsl(7, 65%, 65%);
+}
+
+main {
+    background-image: url(assets/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    padding: 10px;
+    height: 250px;
+    margin: 60px 10px 300px;
+}
+
+.coding {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.coding>img, .coding>div {
+    padding: 10px;
+}
+
+.coding>div>p {
+    padding-top: 10px;
+}
+
+.person {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.person>img {
+    width: 70px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.person>div {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.person>div>p {
+    padding-top: 10px;
+}
+
+.person>div>p::before {
+    content: url(assets/images/icon-github.svg);
+    padding-right: 5px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 90px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
