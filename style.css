@@ -142,17 +142,25 @@ div.upload>p {
     top: 50%;
 }
 
-main>p#orientacao {
+main>p#orientacao, #erroVazio, #erroTamanho {
     margin-bottom: 25px;
     font-size: 0.6em;
     position: relative;
     top: 30%;
 }
 
-main>p#orientacao::before {
+main>p#orientacao::before , #erroVazio::before, #erroTamanho::before{
     content: url(assets/images/icon-info.svg);
     padding: 5px;
 
+}
+
+main>p#erroVazio {
+    display: none;
+}
+
+main>p#erroTamanho {
+    display: none;
 }
 
 div.formulario {
@@ -200,7 +208,7 @@ div.formulario>input#btt {
     cursor: pointer;
 }
 
-div.formulario>input#button:hover {
+div.formulario>input#btt:hover {
     background-color: hsl(7, 84%, 63%);
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.589);
 }

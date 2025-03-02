@@ -5,6 +5,9 @@ let but = document.querySelector('#imageContainer');
 let inputRemove = document.querySelector('#rpos');
 let inputChange = document.querySelector('#cpos');
 let inputGenerate = document.querySelector('#btt')
+let erroImg = document.querySelector('#orientacao')
+let erroImgVazio = document.querySelector('#erroVazio')
+let erroImgTamanho = document.querySelector('#erroTamanho')
 
 image.addEventListener('click', () => {
     inputFile.click();
@@ -19,16 +22,18 @@ inputFile.addEventListener('change', (e) => {
         image.src = reader.result;
     }
 
-
     let size = e.target.files[0].size;
 
     if (size > 512000) {
-        console.log('dentro');
-        erroImg.innerHTML = 'File too large. Please upload a photo under 500KB';
-        erroImg.style.color = 'hsl(7, 84%, 63%)';
+        erroImg.style.display = 'none'
+        erroImgTamanho.style.display = 'block'
+        erroImgTamanho.style.color = 'hsl(7, 84%, 63%)';
     } else {
         reader.readAsDataURL(files[0])
 
+        erroImgTamanho.style.display = 'none'
+        erroImgVazio.style.display = 'none'
+        erroImg.style.display = 'block'
         image.style.width = '70px'
         image.style.height = '70px'
         image.style.position = 'absolute'
@@ -58,24 +63,36 @@ let campoGit = document.querySelector('#txtg')
 let erroNome = document.querySelector('.erroNome')
 let erroEmail = document.querySelector('.erroEmail')
 let erroGit = document.querySelector('.erroGit')
-let erroImg = document.querySelector('#orientacao')
+
 
 inputGenerate.addEventListener('click', () => {
-    let size = image.FileReader();
-    console.log(image.files.size);
     if (image.src == window.location.origin + '/assets/images/icon-upload.svg') {
-        erroImg.innerHTML = 'select an image to continue';
-        erroImg.style.color = 'hsl(7, 84%, 63%)';
+        erroImg.style.display = 'none'
+        erroImgVazio.style.display = 'block'
+        erroImgVazio.style.color = 'hsl(7, 84%, 63%)';
     } else if (campoNome.value.length == '') {
         campoNome.style.borderColor = 'hsl(7, 84%, 63%)';
-        erroNome.style.display = 'block'
+        erroNome.style.display = 'block';
     } else if (campoEmail.value.length == '') {
+        campoNome.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        erroNome.style.display = 'none';
         campoEmail.style.borderColor = 'hsl(7, 84%, 63%)';
-        erroEmail.style.display = 'block'
-
+        erroEmail.style.display = 'block';
     } else if (campoGit.value.length == '') {
+        campoNome.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        campoEmail.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        erroNome.style.display = 'none';
+        erroEmail.style.display = 'none';
         campoGit.style.borderColor = 'hsl(7, 84%, 63%)';
-        erroGit.style.display = 'block'
+        erroGit.style.display = 'block';
+    } else {
+        campoNome.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        campoEmail.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        campoGit.style.borderColor = 'hsla(252, 6%, 83%, 0.356)';
+        erroNome.style.display = 'none';
+        erroEmail.style.display = 'none';
+        erroGit.style.display = 'none';
+        window.location = 'ticket.html';
     }
     console.log('fora');
 });
