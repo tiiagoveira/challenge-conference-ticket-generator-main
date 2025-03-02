@@ -23,22 +23,26 @@
     <main>
       <p>Upload Avatar</p>
       <div class="upload">
-        <label for="uploadImage">
-          <img src="assets/images/icon-upload.svg" alt="icone upload" id="iup">
-          
-        </label>
-        <input type="file" name="uImg" id="uploadImage" accept="image/png, image/jpeg" multiple>
+        <div id="imageContainer">
+          <img src="assets/images/icon-upload.svg" alt="upload" id="iup">
+          <input type="button" value="Remove Image" id="rpos">
+          <input type="button" value="Change Image" id="cpos">
+        </div>
+        <input type="file" name="uImg" id="uploadImage" accept="image/*" multiple>
       </div>
       <p id="orientacao">Upload your photo (JPG or PNG, max size: 500KB).</p>
       <form>
         <div class="formulario">
           <label for="txtn">Full Name</label>
           <input type="text" name="txtn" id="txtn">
+          <p class="erroNome">Please enter a valid name.</p>
           <label for="txte">Email Address</label>
           <input type="text" name="txte" id="txte" placeholder="example@email.com">
+          <p class="erroEmail">Please enter a valid Email address.</p>
           <label for="txtg">GitHub Username</label>
           <input type="text" name="txtg" id="txtg" placeholder="@yourusername">
-          <input id="button" type="submit" value="Generate My Ticket">
+          <p class="erroGit">Please enter a valid Github address.</p>
+          <input type="button" value="Generate My Ticket" id="btt">
         </div>
       </form>
     </main>

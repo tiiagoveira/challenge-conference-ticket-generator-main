@@ -58,7 +58,7 @@ div.upload {
     
 }
 
-div.upload>label {
+div.upload>div#imageContainer {
     padding: 7px 0px;
     display: block;
     text-align: center;
@@ -69,25 +69,66 @@ div.upload>label {
     position: relative;
 }
 
-div.upload>label:hover {
+div.upload>div#imageContainer:hover {
     background-color: hsla(252, 6%, 83%, 0.26);
     cursor: pointer;
 }
 
-div.upload>label>img {
+div.upload>div#imageContainer>img {
     background-color: hsla(252, 6%, 83%, 0.247);
     border: 2px solid hsla(252, 6%, 83%, 0.336);
     border-radius: 10px;
-    width: 40px;        
+    width: 40px; 
+    position: absolute;     
+    top: 35%;
+    left: 45%;
 }
 
-div.upload>label>span {
-    
-}
-
-div.upload>input {
+div.upload>input#uploadImage {
     display: none;
 }
+
+
+div.upload>div#imageContainer>input#rpos {
+    margin: 10px 5px;
+    background-color: hsla(252, 6%, 83%, 0.247);
+    color: white;
+    border: 1px solid hsla(252, 6%, 83%, 0.247);
+    border-radius: 5px;
+    height: 27px;
+    padding: 5px;
+    position: absolute;
+    top: 65%;
+    left: 23%;
+    display: none;
+}
+
+div.upload>div#imageContainer>input#rpos:hover {
+    cursor: pointer;
+    background-color: hsla(252, 6%, 83%, 0.418);
+    text-decoration: underline;
+}
+
+div.upload>div#imageContainer>input#cpos {
+    margin: 10px 5px;
+    background-color: hsla(252, 6%, 83%, 0.247);
+    color: white;
+    border: 1px solid hsla(252, 6%, 83%, 0.247);
+    border-radius: 5px;
+    height: 27px;
+    padding: 5px;
+    position: absolute;
+    top: 65%;
+    left: 49%;
+    display: none;
+}
+
+div.upload>div#imageContainer>input#cpos:hover {
+    cursor: pointer;
+    background-color: hsla(252, 6%, 83%, 0.418);
+    text-decoration: underline;
+}
+
 
 div.upload>label>img {
     position: absolute;
@@ -116,7 +157,7 @@ main>p#orientacao::before {
 
 div.formulario {
     margin: 20px 0px;
-    color: white;
+    color: white;    
 }
 
 div.formulario>label {
@@ -125,13 +166,15 @@ div.formulario>label {
 
 div.formulario>input {
     background-color: hsla(252, 6%, 83%, 0.137);
-    margin: 10px 0px 20px;
+    color: white;
+    margin: 10px 0px 10px;
     display: block;
     width: 100%;
     height: 50px;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid hsla(252, 6%, 83%, 0.356);
+    margin-bottom: 20px;
 }
 
 div.formulario>input:hover {
@@ -145,14 +188,13 @@ div.formulario>input:focus-within {
     color: white;
 }
 
-div.formulario>input#button {
+div.formulario>input#btt {
     background-color: hsl(7, 88%, 67%);
     color: hsl(248, 70%, 10%);
     width: 100%;
     height: 50px;
     font-weight: bold;
     padding: 5px;
-    margin: 30px 0px;
     border-radius: 10px;
     border: 1px solid hsl(7, 88%, 67%);
     cursor: pointer;
@@ -161,6 +203,20 @@ div.formulario>input#button {
 div.formulario>input#button:hover {
     background-color: hsl(7, 84%, 63%);
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.589);
+}
+
+form>div.formulario>p{
+    color: hsl(7, 84%, 63%);
+    margin-bottom: 25px;
+    font-size: 0.6em;
+    display: none;
+    
+}
+
+form>div.formulario>p::before {
+    content: url(assets/images/icon-info.svg);
+    padding: 5px;
+    color: hsl(7, 84%, 63%);
 }
 
 .attribution {
